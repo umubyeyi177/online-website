@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Platform</title>
+</head>
+<body>
+
+  <h1>Platform yanjye</h1>
+
+  <input type="text" id="postInput" placeholder="Andika ubutumwa..." />
+  <button onclick="postMessage()">Post</button>
+
+  <ul id="posts"></ul>
+
+  <script>
+    function postMessage() {
+      let input = document.getElementById("postInput");
+      let message = input.value;
+
+      if(message !== "") {
+        let li = document.createElement("li");
+        li.textContent = message;
+
+        document.getElementById("posts").appendChild(li);
+
+        input.value = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
